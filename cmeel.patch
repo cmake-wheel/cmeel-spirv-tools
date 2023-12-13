@@ -3,10 +3,10 @@
 @@ -44,6 +44,8 @@
  endif()
  set(CMAKE_CXX_EXTENSIONS OFF)
- 
+
 +find_package(SPIRV-Headers REQUIRED CONFIG)
 +set(SPIRV_HEADER_INCLUDE_DIR "${SPIRV-Headers_DIR}/../../../include")
- 
+
  option(ENABLE_RTTI "Enables RTTI" OFF)
  option(SPIRV_ALLOW_TIMERS "Allow timers via clock_gettime on supported platforms" ON)
 --- spirv-tools/external/CMakeLists.txt.orig	2023-12-07 20:15:20.000000000 +0100
@@ -14,7 +14,7 @@
 @@ -26,27 +26,6 @@
      set(${var} ${val} PARENT_SCOPE)
  endfunction()
- 
+
 -if (DEFINED SPIRV-Headers_SOURCE_DIR)
 -  # This allows flexible position of the SPIRV-Headers repo.
 -  set(SPIRV_HEADER_DIR ${SPIRV-Headers_SOURCE_DIR})
@@ -36,6 +36,6 @@
 -  message(FATAL_ERROR
 -    "SPIRV-Headers was not found - please checkout a copy under external/.")
 -endif()
- 
+
  if (NOT ${SPIRV_SKIP_TESTS})
    # Find gmock if we can. If it's not already configured, then try finding

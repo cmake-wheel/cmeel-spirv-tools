@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "cmeel"
-requires = ["cmeel[build]", "cmeel-spirv-headers"]
+requires = ["cmeel-spirv-headers", "cmeel[build]"]
 
 [project]
 description = "cmeel distribution for spirv-tools"
