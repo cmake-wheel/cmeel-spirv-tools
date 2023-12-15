@@ -15,6 +15,7 @@ repository = "https://github.com/cmake-wheel/cmeel-spirv-tools.git"
 upstream = "https://github.com/KhronosGroup/spirv-tools"
 
 [tool.cmeel]
+build-number = 0
 has-sitelib = false
 source = "spirv-tools"
 
