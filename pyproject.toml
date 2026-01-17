@@ -6,7 +6,7 @@ requires = ["cmeel-spirv-headers", "cmeel[build]"]
 description = "cmeel distribution for spirv-tools"
 license = "BSD-3-Clause"
 name = "cmeel-spirv-tools"
-requires-python = ">= 3.8"
+requires-python = ">= 3.10"
 version = "13.1.1"
 
 [project.urls]
